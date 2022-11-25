@@ -15,6 +15,8 @@ public class Font extends javax.swing.JPanel {
      */
     public Font() {
         initComponents();
+                this.setSize(250, 200);
+
     }
 
     /**

@@ -15,6 +15,8 @@ public class Editing extends javax.swing.JPanel {
      */
     public Editing() {
         initComponents();
+                this.setSize(250, 200);
+
     }
 
     /**

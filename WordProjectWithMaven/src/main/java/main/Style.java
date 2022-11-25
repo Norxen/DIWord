@@ -15,6 +15,8 @@ public class Style extends javax.swing.JPanel {
      */
     public Style() {
         initComponents();
+                this.setSize(250, 200);
+
     }
 
     /**

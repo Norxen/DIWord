@@ -31,7 +31,11 @@
             <version>2.6</version>
             <scope>runtime</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE150</version>
+        </dependency>
     </dependencies>
     
 </project>

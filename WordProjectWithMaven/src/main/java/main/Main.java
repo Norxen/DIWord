@@ -15,6 +15,8 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+                this.setSize(250, 200);
+
     }
 
     /**
