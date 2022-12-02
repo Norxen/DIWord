@@ -27,20 +27,63 @@ public class Editing extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 486, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 327, Short.MAX_VALUE)
-        );
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        lblClipboard = new javax.swing.JLabel();
+
+        setLayout(new java.awt.GridBagLayout());
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/editing/buscar (1).png"))); // NOI18N
+        jButton1.setText("Find");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        add(jButton1, gridBagConstraints);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/editing/reemplazarW.png"))); // NOI18N
+        jButton2.setText("Replace");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        add(jButton2, gridBagConstraints);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/editing/seleccionar (1).png"))); // NOI18N
+        jButton3.setText("Select");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        add(jButton3, gridBagConstraints);
+
+        lblClipboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblClipboard.setText("Editing");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
+        add(lblClipboard, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel lblClipboard;
     // End of variables declaration//GEN-END:variables
 }

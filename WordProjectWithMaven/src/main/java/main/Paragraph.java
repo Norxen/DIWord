@@ -48,7 +48,7 @@ public class Paragraph extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(400, 200));
         setLayout(new java.awt.GridBagLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenPuntos.png"))); // NOI18N
         jButton1.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -56,7 +56,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton1, gridBagConstraints);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenNumerado.png"))); // NOI18N
         jButton2.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -64,7 +64,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton2, gridBagConstraints);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenFormato.png"))); // NOI18N
         jButton3.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -72,7 +72,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton3, gridBagConstraints);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/sangriaIzq.png"))); // NOI18N
         jButton4.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -80,7 +80,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton4, gridBagConstraints);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/sangriaDerch.png"))); // NOI18N
         jButton5.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -88,7 +88,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton5, gridBagConstraints);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenar.png"))); // NOI18N
         jButton6.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -96,7 +96,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton6, gridBagConstraints);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-paragraph-18.png"))); // NOI18N
         jButton7.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -104,7 +104,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton7, gridBagConstraints);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/alinearIzq.png"))); // NOI18N
         jButton8.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -112,7 +112,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton8, gridBagConstraints);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/alinearCentro.png"))); // NOI18N
         jButton9.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -120,7 +120,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton9, gridBagConstraints);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/alinearDerch.png"))); // NOI18N
         jButton10.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -128,7 +128,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton10, gridBagConstraints);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/justificar.png"))); // NOI18N
         jButton11.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -136,7 +136,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton11, gridBagConstraints);
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/interlineado.png"))); // NOI18N
         jButton12.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -144,7 +144,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton12, gridBagConstraints);
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/sombreado.png"))); // NOI18N
         jButton13.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -152,7 +152,7 @@ public class Paragraph extends javax.swing.JPanel {
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
         add(jButton13, gridBagConstraints);
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-alinear-al-centro-16.png"))); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/bordes.png"))); // NOI18N
         jButton14.setPreferredSize(new java.awt.Dimension(35, 35));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;

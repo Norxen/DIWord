@@ -50,7 +50,7 @@ public class Clipboard extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(250, 200));
         setLayout(new java.awt.GridBagLayout());
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/copy_paste_document_file_1557.png"))); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/copy_paste_document_file_1557.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
@@ -58,7 +58,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridheight = 3;
         add(jButton5, gridBagConstraints);
 
-        btnCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-documentos-16.png"))); // NOI18N
+        btnCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-documentos-16.png"))); // NOI18N
         btnCopy.setText("Copy");
         btnCopy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,7 +72,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         add(btnCopy, gridBagConstraints);
 
-        btnCut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-scissors-16.png"))); // NOI18N
+        btnCut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-scissors-16.png"))); // NOI18N
         btnCut.setText("Cut");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -81,7 +81,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
         add(btnCut, gridBagConstraints);
 
-        btmFormatPainter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-escoba-16.png"))); // NOI18N
+        btmFormatPainter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-escoba-16.png"))); // NOI18N
         btmFormatPainter.setText("Format Painter");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;

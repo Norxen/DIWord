@@ -4,19 +4,23 @@
  */
 package main;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
 /**
  *
  * @author norxe
  */
 public class Style extends javax.swing.JPanel {
-
-    /**
-     * Creates new form Style
-     */
+   
+    
+    
+    
     public Style() {
         initComponents();
-                this.setSize(250, 200);
-
+        this.setSize(250, 200);
+                 
     }
 
     /**
@@ -27,20 +31,39 @@ public class Style extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList = new javax.swing.JList<>();
+        lblClipboard = new javax.swing.JLabel();
+
+        setLayout(new java.awt.GridBagLayout());
+
+        jList.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
+        jList.setVisibleRowCount(2);
+        jScrollPane1.setViewportView(jList);
+
+        add(jScrollPane1, new java.awt.GridBagConstraints());
+
+        lblClipboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblClipboard.setText("Styles");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.gridwidth = 6;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
+        add(lblClipboard, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JList<String> jList;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblClipboard;
     // End of variables declaration//GEN-END:variables
 }
