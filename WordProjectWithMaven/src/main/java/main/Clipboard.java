@@ -13,7 +13,10 @@ public class Clipboard extends javax.swing.JPanel {
     public Clipboard() {
         initComponents();
 
-        this.setSize(250, 200);
+        //this.setSize(250, 200);
+        
+        
+        
     }
 
     /**
@@ -30,6 +33,7 @@ public class Clipboard extends javax.swing.JPanel {
         menu1 = new java.awt.Menu();
         menu2 = new java.awt.Menu();
         jToggleButton1 = new javax.swing.JToggleButton();
+        jPanel1 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
         btnCopy = new javax.swing.JButton();
         btnCut = new javax.swing.JButton();
@@ -48,7 +52,11 @@ public class Clipboard extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(230, 230, 230));
         setPreferredSize(new java.awt.Dimension(250, 200));
-        setLayout(new java.awt.GridBagLayout());
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(3000, 3000));
+        jPanel1.setMinimumSize(new java.awt.Dimension(250, 200));
+        jPanel1.setPreferredSize(new java.awt.Dimension(250, 200));
+        jPanel1.setLayout(new java.awt.GridBagLayout());
 
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/copy_paste_document_file_1557.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -56,7 +64,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 3;
-        add(jButton5, gridBagConstraints);
+        jPanel1.add(jButton5, gridBagConstraints);
 
         btnCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-documentos-16.png"))); // NOI18N
         btnCopy.setText("Copy");
@@ -70,7 +78,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        add(btnCopy, gridBagConstraints);
+        jPanel1.add(btnCopy, gridBagConstraints);
 
         btnCut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-scissors-16.png"))); // NOI18N
         btnCut.setText("Cut");
@@ -79,7 +87,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridy = 2;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        add(btnCut, gridBagConstraints);
+        jPanel1.add(btnCut, gridBagConstraints);
 
         btmFormatPainter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-escoba-16.png"))); // NOI18N
         btmFormatPainter.setText("Format Painter");
@@ -87,7 +95,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 3;
-        add(btmFormatPainter, gridBagConstraints);
+        jPanel1.add(btmFormatPainter, gridBagConstraints);
 
         lblClipboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblClipboard.setText("Clipboard");
@@ -96,7 +104,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridy = 6;
         gridBagConstraints.gridwidth = 6;
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        add(lblClipboard, gridBagConstraints);
+        jPanel1.add(lblClipboard, gridBagConstraints);
 
         lblPaste.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPaste.setText("Paste");
@@ -104,7 +112,7 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 3;
-        add(lblPaste, gridBagConstraints);
+        jPanel1.add(lblPaste, gridBagConstraints);
 
         jComboBox1.setPreferredSize(new java.awt.Dimension(22, 22));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +124,18 @@ public class Clipboard extends javax.swing.JPanel {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 5;
         gridBagConstraints.gridwidth = 3;
-        add(jComboBox1, gridBagConstraints);
+        jPanel1.add(jComboBox1, gridBagConstraints);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCopyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopyActionPerformed
@@ -134,6 +153,7 @@ public class Clipboard extends javax.swing.JPanel {
     private javax.swing.JButton btnCut;
     private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblClipboard;
     private javax.swing.JLabel lblPaste;
