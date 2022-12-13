@@ -1,41 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package main;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
-import javax.swing.AbstractAction;
-import javax.swing.JComponent;
 import javax.swing.JSlider;
-import javax.swing.KeyStroke;
 
 /**
- *
+ * Clase Footer o Inferior donde se muestra el control del zoom y otras opciones.
  * @author calde
  */
+
 public class Footer extends javax.swing.JPanel {
 
     /**
-     * Creates new form Footer
+     * Constructor de la clase, inicializa componentes
      */
     public Footer() {
         initComponents();
-        jSlider1.addMouseWheelListener(new MouseWheelListener() {
-            @Override
-            public void mouseWheelMoved(MouseWheelEvent e) {
-               
-                if(e.isControlDown()) jSlider1.setValue(jSlider1.getValue() - e.getUnitsToScroll());
-             
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        });
-        
+    }
+    
+    /**
+     * Para obtener el slider del componente en el Main.
+     * @return slider referente al zoom de la vista footer.
+     */
+    public JSlider getZoomSlider(){
+        return jSlider1;
     }
 
     /**
@@ -48,17 +34,18 @@ public class Footer extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         lblClipboard = new javax.swing.JLabel();
         lblClipboard1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jSlider1 = new javax.swing.JSlider();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jToggleButton3 = new javax.swing.JToggleButton();
+        jToggleButton2 = new javax.swing.JToggleButton();
+        jToggleButton4 = new javax.swing.JToggleButton();
 
         setPreferredSize(new java.awt.Dimension(400, 400));
         setLayout(new java.awt.GridBagLayout());
@@ -68,9 +55,8 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        gridBagConstraints.insets = new java.awt.Insets(0, 24, 0, 0);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 24, 0, 10);
         add(lblClipboard, gridBagConstraints);
 
         lblClipboard1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -79,40 +65,16 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 2;
-        gridBagConstraints.gridheight = 2;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         add(lblClipboard1, gridBagConstraints);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/footer/revisiontick.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/footer/revisiontick.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 24, 0, 0);
         add(jButton1, gridBagConstraints);
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/footer/lecturaabajo.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 15;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        add(jButton2, gridBagConstraints);
-
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/justificar.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 16;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        add(jButton3, gridBagConstraints);
-
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/footer/diseñowebabajo.png"))); // NOI18N
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 17;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        add(jButton4, gridBagConstraints);
 
         jSlider1.setMajorTickSpacing(5);
         jSlider1.setMaximum(200);
@@ -127,7 +89,7 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 19;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         add(jSlider1, gridBagConstraints);
 
         jButton5.setText("-");
@@ -139,7 +101,8 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 18;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 10, 0, 0);
         add(jButton5, gridBagConstraints);
 
         jButton6.setText("+");
@@ -151,7 +114,8 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 20;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 10);
         add(jButton6, gridBagConstraints);
 
         jLabel1.setText("200%");
@@ -163,7 +127,7 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 21;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
         gridBagConstraints.insets = new java.awt.Insets(0, 2, 0, 24);
         add(jLabel1, gridBagConstraints);
 
@@ -177,16 +141,44 @@ public class Footer extends javax.swing.JPanel {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.weightx = 1.0;
         add(jPanel1, gridBagConstraints);
+
+        buttonGroup1.add(jToggleButton3);
+        jToggleButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/footer/lecturaabajo.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        add(jToggleButton3, gridBagConstraints);
+
+        buttonGroup1.add(jToggleButton2);
+        jToggleButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/justificar.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        add(jToggleButton2, gridBagConstraints);
+
+        buttonGroup1.add(jToggleButton4);
+        jToggleButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/footer/diseñowebabajo.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+        add(jToggleButton4, gridBagConstraints);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Metodo para actualizar el slider.
+     * @param evt 
+     */
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
       jSlider1.setValue(jSlider1.getValue()-5);
     }//GEN-LAST:event_jButton5ActionPerformed
-
+    /**
+     * Metodo para actualizar el slider.
+     * @param evt 
+     */
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
          jSlider1.setValue(jSlider1.getValue()+5);
     }//GEN-LAST:event_jButton6ActionPerformed
-
+    /**
+     * Metodo para actualizar el slider.
+     * @param evt 
+     */
     private void jSlider1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSlider1StateChanged
         jLabel1.setText("" + jSlider1.getValue());
     }//GEN-LAST:event_jSlider1StateChanged
@@ -197,15 +189,16 @@ public class Footer extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSlider jSlider1;
+    private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JToggleButton jToggleButton3;
+    private javax.swing.JToggleButton jToggleButton4;
     private javax.swing.JLabel lblClipboard;
     private javax.swing.JLabel lblClipboard1;
     // End of variables declaration//GEN-END:variables

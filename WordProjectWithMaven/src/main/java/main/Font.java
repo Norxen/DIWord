@@ -4,21 +4,77 @@
  */
 package main;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
+import javax.swing.AbstractAction;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JToggleButton;
+import javax.swing.KeyStroke;
+import org.jdesktop.swingx.autocomplete.AutoCompleteDecorator;
+
 /**
- *
+ * Clase que corresponde al panel Font de la app
  * @author norxe
  */
 public class Font extends javax.swing.JPanel {
 
     /**
-     * Creates new form Font
+     * Constructor de la clase, inicializa componentes
      */
     public Font() {
         initComponents();
-                this.setSize(250, 200);
-
+        AutoCompleteDecorator.decorate(cbFuentes);
+        AutoCompleteDecorator.decorate(cbSize);
+        
+        setKeyBindingForButton(bCursiva, KeyStroke.getKeyStroke(KeyEvent.VK_I, InputEvent.CTRL_DOWN_MASK), "I");
+        setKeyBindingForButton(bNegrita, KeyStroke.getKeyStroke(KeyEvent.VK_B, InputEvent.CTRL_DOWN_MASK), "B");
+        setKeyBindingForButton(bSubrayar, KeyStroke.getKeyStroke(KeyEvent.VK_U, InputEvent.CTRL_DOWN_MASK), "U");
     }
-
+    
+    /**
+     * Metodo utilizado unicamente para gestionar keybindings de botones.
+     * @param button
+     * @param key
+     * @param mapKey 
+     */
+    private void setKeyBindingForButton(JToggleButton button, KeyStroke key, String mapKey) {
+        button.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW)
+                .put(key, mapKey);
+        button.getActionMap().put(mapKey, new AbstractAction(){
+            @Override public void actionPerformed(ActionEvent ae) {
+                button.doClick();
+            }
+        });
+    }
+    
+    /**
+     * Metodo que se utiliza para actualizar la fuente al cambiar de estilo.
+     * @param style 
+     */
+    public void UpdateFont(TextStyle style) {
+        cbFuentes.setSelectedIndex(style.getFontIndex());
+        cbSize.setSelectedIndex(style.getFontSizeIndex());
+        bNegrita.setSelected(style.isBold());
+        bCursiva.setSelected(style.isCursive());
+        bSubrayar.setSelected(style.isUnderlined());
+    }
+    
+    /**
+     * Metodo para obtener el JCombobox correspondiente a las fuentes.
+     * @return JCombobox que contiene las fuentes.
+     */
+    public JComboBox<String> getJComboBoxFont() {
+        return cbFuentes;
+    }
+    /**
+     * Metodo para obtener el JCombobox correspondiente a los tamaños de fuente.
+     * @return JCombobox que contiene los respectivos tamaños de las fuentes.
+     */
+    public JComboBox<String> getJComboBoxSize() {
+        return cbSize;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,11 +83,296 @@ public class Font extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        setLayout(new java.awt.GridBagLayout());
+        jPanel3 = new javax.swing.JPanel();
+        cbFuentes = new javax.swing.JComboBox<>();
+        cbSize = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        bNegrita = new javax.swing.JToggleButton();
+        bCursiva = new javax.swing.JToggleButton();
+        bSubrayar = new javax.swing.JToggleButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+
+        setMinimumSize(new java.awt.Dimension(350, 135));
+        setPreferredSize(new java.awt.Dimension(400, 120));
+        setLayout(new java.awt.BorderLayout());
+
+        jPanel3.setMinimumSize(new java.awt.Dimension(0, 78));
+        jPanel3.setLayout(new java.awt.GridBagLayout());
+
+        cbFuentes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Agency FB", "Algerian", "Arial", "Dejavu Sans Garamond", "Dialog", "Georgia", "Gigi", "Gill Sans MT", " " }));
+        cbFuentes.setMinimumSize(new java.awt.Dimension(140, 22));
+        cbFuentes.setName(""); // NOI18N
+        cbFuentes.setPreferredSize(new java.awt.Dimension(140, 26));
+        cbFuentes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbFuentesActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 4;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 0, 6);
+        jPanel3.add(cbFuentes, gridBagConstraints);
+
+        cbSize.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "8", "9", "10", "11", "12", "14", "16", "18", "20", "22", "24", "26", "28", "36", "48", "72" }));
+        cbSize.setMinimumSize(new java.awt.Dimension(40, 22));
+        cbSize.setPreferredSize(new java.awt.Dimension(60, 26));
+        cbSize.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSizeActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 0, 0, 0);
+        jPanel3.add(cbSize, gridBagConstraints);
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/icons8-aumentar-fuente-18.png"))); // NOI18N
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton1, gridBagConstraints);
+
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/icons8-reducir-fuente-18.png"))); // NOI18N
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton2, gridBagConstraints);
+
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/icons8-mayúscula-inicial-18.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton3, gridBagConstraints);
+
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/borrarFormato.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 9;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton4, gridBagConstraints);
+
+        jButton8.setText("<html><s>ab</s></html>");
+        jButton8.setMinimumSize(new java.awt.Dimension(18, 18));
+        jButton8.setPreferredSize(new java.awt.Dimension(26, 26));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton8, gridBagConstraints);
+
+        jButton9.setText("<html><b>X<sup>2</sup></b></html>");
+        jButton9.setMinimumSize(new java.awt.Dimension(26, 26));
+        jButton9.setPreferredSize(new java.awt.Dimension(26, 26));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton9, gridBagConstraints);
+
+        jButton10.setText("<html><b>X<sub>2</sub></b></html>");
+        jButton10.setPreferredSize(new java.awt.Dimension(26, 26));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton10, gridBagConstraints);
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/efectosTexto.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton11, gridBagConstraints);
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/colorResaltado.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton12, gridBagConstraints);
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/font/colorLetra.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(jButton13, gridBagConstraints);
+
+        bNegrita.setText("<html><b>B</b></html>");
+        bNegrita.setMinimumSize(new java.awt.Dimension(26, 26));
+        bNegrita.setPreferredSize(new java.awt.Dimension(26, 26));
+        bNegrita.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bNegritaActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(bNegrita, gridBagConstraints);
+
+        bCursiva.setFont(new java.awt.Font("Gill Sans MT", 0, 12)); // NOI18N
+        bCursiva.setText("<html><i>I</i></html>");
+        bCursiva.setMinimumSize(new java.awt.Dimension(26, 26));
+        bCursiva.setPreferredSize(new java.awt.Dimension(26, 26));
+        bCursiva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bCursivaActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(bCursiva, gridBagConstraints);
+
+        bSubrayar.setFont(new java.awt.Font("Gill Sans MT", 1, 12)); // NOI18N
+        bSubrayar.setText("<html><u>U</u></html>");
+        bSubrayar.setMinimumSize(new java.awt.Dimension(26, 26));
+        bSubrayar.setPreferredSize(new java.awt.Dimension(26, 26));
+        bSubrayar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSubrayarActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(6, 6, 6, 6);
+        jPanel3.add(bSubrayar, gridBagConstraints);
+
+        add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setMinimumSize(new java.awt.Dimension(0, 20));
+        jPanel2.setPreferredSize(new java.awt.Dimension(250, 20));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Font");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jLabel1, gridBagConstraints);
+
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.ABOVE_BASELINE;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jSeparator1, gridBagConstraints);
+
+        add(jPanel2, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * Metodo para avanzar el indice sin pasarnos del maximo.
+     * @param evt 
+     */
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        int selection = cbSize.getSelectedIndex();
+        if(selection + 1 < cbSize.getItemCount()){
+            cbSize.setSelectedIndex(selection+1);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void cbSizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSizeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbSizeActionPerformed
+
+    private void cbFuentesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbFuentesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbFuentesActionPerformed
+/**
+ *  Metodo para reducir el indice sin obtener un valor negativo inválido.
+ * @param evt 
+ */
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        int selection = cbSize.getSelectedIndex();
+        if(selection - 1 >= 0){
+            cbSize.setSelectedIndex(selection-1);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void bNegritaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bNegritaActionPerformed
+        
+    }//GEN-LAST:event_bNegritaActionPerformed
+
+    private void bCursivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCursivaActionPerformed
+        
+    }//GEN-LAST:event_bCursivaActionPerformed
+
+    private void bSubrayarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSubrayarActionPerformed
+       
+    }//GEN-LAST:event_bSubrayarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton bCursiva;
+    private javax.swing.JToggleButton bNegrita;
+    private javax.swing.JToggleButton bSubrayar;
+    private javax.swing.JComboBox<String> cbFuentes;
+    private javax.swing.JComboBox<String> cbSize;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

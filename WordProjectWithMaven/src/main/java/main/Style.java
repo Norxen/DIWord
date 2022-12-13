@@ -4,23 +4,28 @@
  */
 package main;
 
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
+import javax.swing.JList;
 
 /**
- *
+ *  Clase referente al panel Style de la app
  * @author norxe
  */
 public class Style extends javax.swing.JPanel {
-   
-    
-    
-    
+
+    /**
+     * Constructor de la clase, inicializa componentes
+     */
     public Style() {
         initComponents();
-        this.setSize(250, 200);
-                 
+       
+    }
+    
+    /**
+     * Metodo para obtener la lista donde mostrar los diferentes estilos.
+     * @return lista donde guardamos los estilos.
+     */
+    public JList<String> getJList() {
+        return jList1;
     }
 
     /**
@@ -33,37 +38,71 @@ public class Style extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList = new javax.swing.JList<>();
-        lblClipboard = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
-        setLayout(new java.awt.GridBagLayout());
+        setMinimumSize(new java.awt.Dimension(200, 135));
+        setPreferredSize(new java.awt.Dimension(300, 135));
+        setLayout(new java.awt.BorderLayout());
 
-        jList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+        jPanel3.setLayout(new java.awt.GridBagLayout());
+
+        jList1.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "<html><p style=\"font-family:'Courier New'\">Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>", "<html><p>Aaaaaaa</p><p></p><p>Bbbbbbb</p></html>" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jList.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
-        jList.setVisibleRowCount(2);
-        jScrollPane1.setViewportView(jList);
+        jList1.setLayoutOrientation(javax.swing.JList.HORIZONTAL_WRAP);
+        jList1.setMinimumSize(new java.awt.Dimension(252, 120));
+        jList1.setVisibleRowCount(2);
+        jScrollPane2.setViewportView(jList1);
 
-        add(jScrollPane1, new java.awt.GridBagConstraints());
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        jPanel3.add(jScrollPane2, gridBagConstraints);
 
-        lblClipboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblClipboard.setText("Styles");
+        add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setMinimumSize(new java.awt.Dimension(249, 20));
+        jPanel2.setPreferredSize(new java.awt.Dimension(250, 20));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Styles");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        add(lblClipboard, gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jLabel1, gridBagConstraints);
+
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.ABOVE_BASELINE;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jSeparator1, gridBagConstraints);
+
+        add(jPanel2, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> jList;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblClipboard;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

@@ -4,19 +4,18 @@
  */
 package main;
 
-import java.awt.Color;
-import java.awt.Dimension;
-
-
+/**
+ * Clase referente al panel Clipboard de la app
+ * @author norxe
+ * 
+ */
 public class Clipboard extends javax.swing.JPanel {
 
+    /**
+     * Constructor de la clase, inicializa componentes
+     */
     public Clipboard() {
         initComponents();
-
-        //this.setSize(250, 200);
-        
-        
-        
     }
 
     /**
@@ -33,14 +32,15 @@ public class Clipboard extends javax.swing.JPanel {
         menu1 = new java.awt.Menu();
         menu2 = new java.awt.Menu();
         jToggleButton1 = new javax.swing.JToggleButton();
-        jPanel1 = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        btnCopy = new javax.swing.JButton();
-        btnCut = new javax.swing.JButton();
-        btmFormatPainter = new javax.swing.JButton();
-        lblClipboard = new javax.swing.JLabel();
-        lblPaste = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         menu1.setLabel("File");
         menuBar1.add(menu1);
@@ -51,112 +51,92 @@ public class Clipboard extends javax.swing.JPanel {
         jToggleButton1.setText("jToggleButton1");
 
         setBackground(new java.awt.Color(230, 230, 230));
-        setPreferredSize(new java.awt.Dimension(250, 200));
+        setMinimumSize(new java.awt.Dimension(200, 135));
+        setPreferredSize(new java.awt.Dimension(200, 120));
+        setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setMaximumSize(new java.awt.Dimension(3000, 3000));
-        jPanel1.setMinimumSize(new java.awt.Dimension(250, 200));
-        jPanel1.setPreferredSize(new java.awt.Dimension(250, 200));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jPanel3.setPreferredSize(new java.awt.Dimension(200, 180));
+        jPanel3.setLayout(new java.awt.GridBagLayout());
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/copy_paste_document_file_1557.png"))); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clipboard/icons8-pegar-48.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.gridwidth = 3;
         gridBagConstraints.gridheight = 3;
-        jPanel1.add(jButton5, gridBagConstraints);
+        jPanel3.add(jButton1, gridBagConstraints);
 
-        btnCopy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-documentos-16.png"))); // NOI18N
-        btnCopy.setText("Copy");
-        btnCopy.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCopyActionPerformed(evt);
-            }
-        });
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clipboard/icons8-documentos-16.png"))); // NOI18N
+        jButton2.setText("Copy");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        jPanel3.add(jButton2, gridBagConstraints);
+
+        jButton3.setText("Cut");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        jPanel1.add(btnCopy, gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        jPanel3.add(jButton3, gridBagConstraints);
 
-        btnCut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-scissors-16.png"))); // NOI18N
-        btnCut.setText("Cut");
+        jButton4.setText("Paste Formatted");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 3;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
-        jPanel1.add(btnCut, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        jPanel3.add(jButton4, gridBagConstraints);
 
-        btmFormatPainter.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/clipboard/icons8-escoba-16.png"))); // NOI18N
-        btmFormatPainter.setText("Format Painter");
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 3;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 3;
-        jPanel1.add(btmFormatPainter, gridBagConstraints);
-
-        lblClipboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblClipboard.setText("Clipboard");
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Paste");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        jPanel1.add(lblClipboard, gridBagConstraints);
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.gridwidth = 3;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        jPanel3.add(jLabel2, gridBagConstraints);
 
-        lblPaste.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPaste.setText("Paste");
+        add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setMinimumSize(new java.awt.Dimension(249, 20));
+        jPanel2.setPreferredSize(new java.awt.Dimension(200, 20));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Clipboard");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
-        gridBagConstraints.gridwidth = 3;
-        jPanel1.add(lblPaste, gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jLabel1, gridBagConstraints);
 
-        jComboBox1.setPreferredSize(new java.awt.Dimension(22, 22));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 5;
-        gridBagConstraints.gridwidth = 3;
-        jPanel1.add(jComboBox1, gridBagConstraints);
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.ABOVE_BASELINE;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jSeparator1, gridBagConstraints);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        add(jPanel2, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnCopyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnCopyActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btmFormatPainter;
-    private javax.swing.JButton btnCopy;
-    private javax.swing.JButton btnCut;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JLabel lblClipboard;
-    private javax.swing.JLabel lblPaste;
     private java.awt.Menu menu1;
     private java.awt.Menu menu2;
     private java.awt.MenuBar menuBar1;

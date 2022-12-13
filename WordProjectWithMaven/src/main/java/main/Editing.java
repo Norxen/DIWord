@@ -5,7 +5,7 @@
 package main;
 
 /**
- *
+ * Clase que corresponde al panel Editing de la app
  * @author norxe
  */
 public class Editing extends javax.swing.JPanel {
@@ -15,7 +15,6 @@ public class Editing extends javax.swing.JPanel {
      */
     public Editing() {
         initComponents();
-                this.setSize(250, 200);
 
     }
 
@@ -29,61 +28,101 @@ public class Editing extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        lblClipboard = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
-        setLayout(new java.awt.GridBagLayout());
+        setMinimumSize(new java.awt.Dimension(100, 135));
+        setPreferredSize(new java.awt.Dimension(100, 144));
+        setLayout(new java.awt.BorderLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/editing/buscar (1).png"))); // NOI18N
-        jButton1.setText("Find");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jPanel3.setLayout(new java.awt.GridBagLayout());
+
+        jButton1.setBackground(new java.awt.Color(242, 242, 242));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/editing/buscar (1).png"))); // NOI18N
+        jButton1.setText("Search");
+        jButton1.setBorder(null);
+        jButton1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton1.setMinimumSize(new java.awt.Dimension(100, 25));
+        jButton1.setPreferredSize(new java.awt.Dimension(100, 40));
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        add(jButton1, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
+        jPanel3.add(jButton1, gridBagConstraints);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/editing/reemplazarW.png"))); // NOI18N
+        jButton2.setBackground(new java.awt.Color(242, 242, 242));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/editing/reemplazarW.png"))); // NOI18N
         jButton2.setText("Replace");
+        jButton2.setBorder(null);
+        jButton2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton2.setMinimumSize(new java.awt.Dimension(100, 25));
+        jButton2.setPreferredSize(new java.awt.Dimension(100, 40));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        add(jButton2, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
+        jPanel3.add(jButton2, gridBagConstraints);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/editing/seleccionar (1).png"))); // NOI18N
+        jButton3.setBackground(new java.awt.Color(242, 242, 242));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/editing/seleccionar (1).png"))); // NOI18N
         jButton3.setText("Select");
+        jButton3.setBorder(null);
+        jButton3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jButton3.setMinimumSize(new java.awt.Dimension(100, 25));
+        jButton3.setPreferredSize(new java.awt.Dimension(100, 40));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        add(jButton3, gridBagConstraints);
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
+        jPanel3.add(jButton3, gridBagConstraints);
 
-        lblClipboard.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblClipboard.setText("Editing");
+        add(jPanel3, java.awt.BorderLayout.CENTER);
+
+        jPanel2.setMinimumSize(new java.awt.Dimension(249, 20));
+        jPanel2.setPreferredSize(new java.awt.Dimension(250, 20));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Editing");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 6;
-        gridBagConstraints.gridwidth = 6;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        add(lblClipboard, gridBagConstraints);
-    }// </editor-fold>//GEN-END:initComponents
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jLabel1, gridBagConstraints);
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.ABOVE_BASELINE;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jSeparator1, gridBagConstraints);
+
+        add(jPanel2, java.awt.BorderLayout.SOUTH);
+    }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel lblClipboard;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

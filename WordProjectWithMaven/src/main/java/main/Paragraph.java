@@ -5,17 +5,17 @@
 package main;
 
 /**
- *
+ * Describe and implements the part Paragraph in the application.
+ * <p>There is almost no logic here </p>
  * @author norxe
  */
 public class Paragraph extends javax.swing.JPanel {
 
     /**
-     * Creates new form Paragraph
+     * Constructor de la clase, inicializa componentes
      */
     public Paragraph() {
         initComponents();
-                this.setSize(250, 200);
 
     }
 
@@ -29,6 +29,8 @@ public class Paragraph extends javax.swing.JPanel {
     private void initComponents() {
         java.awt.GridBagConstraints gridBagConstraints;
 
+        bgAlign = new javax.swing.ButtonGroup();
+        jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -36,146 +38,169 @@ public class Paragraph extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jButton14 = new javax.swing.JButton();
-        Paragraph = new javax.swing.JLabel();
+        bSangriaIzq = new javax.swing.JToggleButton();
+        bSangriaCentral = new javax.swing.JToggleButton();
+        bSangriaDer = new javax.swing.JToggleButton();
+        bJustificar = new javax.swing.JToggleButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
-        setPreferredSize(new java.awt.Dimension(400, 200));
-        setLayout(new java.awt.GridBagLayout());
+        setMinimumSize(new java.awt.Dimension(320, 135));
+        setPreferredSize(new java.awt.Dimension(320, 120));
+        setLayout(new java.awt.BorderLayout());
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenPuntos.png"))); // NOI18N
-        jButton1.setPreferredSize(new java.awt.Dimension(35, 35));
+        jPanel3.setLayout(new java.awt.GridBagLayout());
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/ordenPuntos.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton1, gridBagConstraints);
+        jPanel3.add(jButton1, gridBagConstraints);
 
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenNumerado.png"))); // NOI18N
-        jButton2.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/ordenNumerado.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton2, gridBagConstraints);
+        jPanel3.add(jButton2, gridBagConstraints);
 
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenFormato.png"))); // NOI18N
-        jButton3.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/ordenFormato.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton3, gridBagConstraints);
+        jPanel3.add(jButton3, gridBagConstraints);
 
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/sangriaIzq.png"))); // NOI18N
-        jButton4.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/sangriaIzq.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton4, gridBagConstraints);
+        jPanel3.add(jButton4, gridBagConstraints);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/sangriaDerch.png"))); // NOI18N
-        jButton5.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/sangriaDerch.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton5, gridBagConstraints);
+        jPanel3.add(jButton5, gridBagConstraints);
 
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/ordenar.png"))); // NOI18N
-        jButton6.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/ordenar.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton6, gridBagConstraints);
+        jPanel3.add(jButton6, gridBagConstraints);
 
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/icons8-paragraph-18.png"))); // NOI18N
-        jButton7.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/icons8-paragraph-18.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 0;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
         gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton7, gridBagConstraints);
+        jPanel3.add(jButton7, gridBagConstraints);
 
-        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/alinearIzq.png"))); // NOI18N
-        jButton8.setPreferredSize(new java.awt.Dimension(35, 35));
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/interlineado.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        jPanel3.add(jButton12, gridBagConstraints);
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/sombreado.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        jPanel3.add(jButton13, gridBagConstraints);
+
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/bordes.png"))); // NOI18N
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
+        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
+        jPanel3.add(jButton14, gridBagConstraints);
+
+        bgAlign.add(bSangriaIzq);
+        bSangriaIzq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/alinearIzq.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton8, gridBagConstraints);
+        jPanel3.add(bSangriaIzq, gridBagConstraints);
 
-        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/alinearCentro.png"))); // NOI18N
-        jButton9.setPreferredSize(new java.awt.Dimension(35, 35));
+        bgAlign.add(bSangriaCentral);
+        bSangriaCentral.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/alinearCentro.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton9, gridBagConstraints);
+        jPanel3.add(bSangriaCentral, gridBagConstraints);
 
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/alinearDerch.png"))); // NOI18N
-        jButton10.setPreferredSize(new java.awt.Dimension(35, 35));
+        bgAlign.add(bSangriaDer);
+        bSangriaDer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/alinearDerch.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton10, gridBagConstraints);
+        jPanel3.add(bSangriaDer, gridBagConstraints);
 
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/justificar.png"))); // NOI18N
-        jButton11.setPreferredSize(new java.awt.Dimension(35, 35));
+        bgAlign.add(bJustificar);
+        bJustificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/paragraph/justificar.png"))); // NOI18N
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton11, gridBagConstraints);
+        jPanel3.add(bJustificar, gridBagConstraints);
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/interlineado.png"))); // NOI18N
-        jButton12.setPreferredSize(new java.awt.Dimension(35, 35));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton12, gridBagConstraints);
+        add(jPanel3, java.awt.BorderLayout.CENTER);
 
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/sombreado.png"))); // NOI18N
-        jButton13.setPreferredSize(new java.awt.Dimension(35, 35));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 5;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton13, gridBagConstraints);
+        jPanel2.setMinimumSize(new java.awt.Dimension(249, 20));
+        jPanel2.setPreferredSize(new java.awt.Dimension(250, 20));
+        jPanel2.setLayout(new java.awt.GridBagLayout());
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/paragraph/bordes.png"))); // NOI18N
-        jButton14.setPreferredSize(new java.awt.Dimension(35, 35));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 6;
-        gridBagConstraints.gridy = 1;
-        gridBagConstraints.insets = new java.awt.Insets(10, 10, 10, 10);
-        add(jButton14, gridBagConstraints);
-
-        Paragraph.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Paragraph.setText("Paragraph");
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Paragraph");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 3;
-        gridBagConstraints.gridwidth = 7;
-        gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
-        add(Paragraph, gridBagConstraints);
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jLabel1, gridBagConstraints);
+
+        jSeparator1.setForeground(new java.awt.Color(153, 153, 153));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.ABOVE_BASELINE;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        jPanel2.add(jSeparator1, gridBagConstraints);
+
+        add(jPanel2, java.awt.BorderLayout.SOUTH);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Paragraph;
+    private javax.swing.JToggleButton bJustificar;
+    private javax.swing.JToggleButton bSangriaCentral;
+    private javax.swing.JToggleButton bSangriaDer;
+    private javax.swing.JToggleButton bSangriaIzq;
+    private javax.swing.ButtonGroup bgAlign;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
@@ -185,7 +210,9 @@ public class Paragraph extends javax.swing.JPanel {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JSeparator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }
